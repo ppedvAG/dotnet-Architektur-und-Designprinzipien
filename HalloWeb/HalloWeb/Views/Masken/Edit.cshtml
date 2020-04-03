@@ -1,0 +1,53 @@
+﻿@model HalloWeb.Models.Maske
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Maske</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Farbe" class="control-label"></label>
+                <input asp-for="Farbe" class="form-control" />
+                <span asp-validation-for="Farbe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Größe" class="control-label"></label>
+                <input asp-for="Größe" class="form-control" />
+                <span asp-validation-for="Größe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Hersteller" class="control-label"></label>
+                <input asp-for="Hersteller" class="form-control" />
+                <span asp-validation-for="Hersteller" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Datum" class="control-label"></label>
+                <input asp-for="Datum" class="form-control" />
+                <span asp-validation-for="Datum" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
