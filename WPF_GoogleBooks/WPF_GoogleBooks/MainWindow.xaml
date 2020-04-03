@@ -1,0 +1,33 @@
+﻿<Window x:Class="WPF_GoogleBooks.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_GoogleBooks"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="600">
+
+    <DockPanel>
+        <Grid DockPanel.Dock="Top"  Margin="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            <Label>Suchen</Label>
+            <TextBox Grid.Column="1" Name="suchTb"/>
+            <Button Grid.Column="2" Click="Suchen">Suchen</Button>
+            <Button Click="ExportXML">Export XML</Button>
+        </Grid>
+        <TabControl>
+            <TabItem Header="JSON">
+                <TextBox Name="jsonTb" TextWrapping="Wrap"/>
+            </TabItem>
+            <TabItem Header="Grid">
+                <DataGrid Name="myGrid" />
+            </TabItem>
+        </TabControl>
+
+    </DockPanel>
+</Window>

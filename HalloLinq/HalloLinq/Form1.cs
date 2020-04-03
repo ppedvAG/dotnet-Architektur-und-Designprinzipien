@@ -49,6 +49,8 @@ namespace HalloLinq
 
         private void button4_Click(object sender, EventArgs e)
         {
+
+            //LAMBDA
             dataGridView1.DataSource = liste.Where(x => x.GebDatum.Month >= 6)
                                             .OrderBy(x => x.GebDatum.Day)
                                             .ThenBy(x => x.GebDatum.Month)
